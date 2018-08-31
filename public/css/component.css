@@ -1,0 +1,549 @@
+/*
+ * Bdoy
+ * Light
+ * Main
+ * Main-left
+ * Gashapon
+ * Logo
+ * Icon
+ * mobile_menu
+ * prize_form
+ * gashapon
+ * login
+ * illustration
+ * snow
+ */
+/*-------------------------*/
+/* $Bdoy 
+---------------------------*/
+body{
+	background-image: url('/image/bg.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center center;
+	height: 100vh;
+}
+
+#app{
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+/*-------------------------*/
+/* $Light 
+---------------------------*/
+.light__wrapper{
+	position: relative;
+	height: 80px;
+}
+
+.light, .light_1, .light_2{
+	position: absolute;
+	opacity: 0;
+	width: 100%;
+	height: 80px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+}
+
+.light{
+	opacity: 1;
+	background-image: url('/image/light.png');
+}
+
+.light_1{
+	background-image: url('/image/light01.png');
+    animation:light 2s infinite  ;
+}
+
+.light_2{
+	background-image: url('/image/light02.png');
+    animation:light 2s infinite  ;
+    animation-delay:1s;
+    -webkit-animation-delay:1s
+}
+
+@-webkit-keyframes light {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+@keyframes light {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+	.light__wrapper, .light, .light_1, .light_2{
+		height: 70px;
+	}
+
+}
+
+@media screen and (max-width: 992px) {
+	.light__wrapper, .light, .light_1, .light_2{
+		height: 65px;
+	}
+}
+
+/*-------------------------*/
+/* $Main 
+---------------------------*/
+.main__wrapper{
+	padding: 0 50px;
+}
+
+@media screen and (max-width: 768px) {
+	.main__wrapper{
+		padding: 0 0px;
+	}
+}
+
+/*-------------------------*/
+/* $Main-left
+---------------------------*/
+.main__left__wrapper{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	height: calc( 100vh - 110px);
+}
+
+.main__btn__wrapper{
+	width: 80%;
+	margin: 0 auto;
+}
+
+.main__btn__wrapper img{
+	max-width: 100%;
+	height: auto;
+	cursor: pointer;
+}
+
+.main__btn__wrapper:hover{
+    animation:main_btn_hover .5s;
+    animation-fill-mode:forwards;
+}
+
+@-webkit-keyframes main_btn_hover {
+    0% {
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(1.1);
+    }
+}
+
+@keyframes main_btn_hover {
+    0% {
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(1.1);
+    }
+}
+
+@media screen and (max-width: 768px) {
+	.main__left__wrapper{
+		height: auto;
+	}
+}
+
+
+/*-------------------------*/
+/* $Gashapon 
+---------------------------*/
+.main__right__wrapper{
+	height: calc( 100vh - 100px);
+}
+
+.gashapon__wrapper{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	width: 100%;
+  max-height: 100%;
+}
+
+#gashapon_buttom{
+	cursor: pointer;
+}
+
+#gift{
+  display: none;
+}
+
+
+@media screen and (max-width: 1200px) {
+.main__right__wrapper{
+  height: auto;
+}
+}
+
+/*-------------------------*/
+/* $Logo 
+---------------------------*/
+
+.logo__wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 30px 0px;
+}
+
+.logo__wrapper img{
+    max-width: 80%;
+}
+
+@media screen and (max-width: 1200px) {
+	.logo__wrapper{
+	    justify-content: center;
+	    align-items: center;
+	}
+}
+
+/*-------------------------*/
+/* $Icon 
+---------------------------*/
+.si-icons span {
+	display: inline-block;
+    width: 50px;
+    height: 50px;
+	margin: 15px 15px;
+	cursor: pointer;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+/*SVG*/
+.volume{
+	position: absolute;
+	right: 0;
+	top: 50px;
+	color: rgba(0,0,0,.5)
+}
+
+.hamburger__wrapper{
+	display: none;
+	position: absolute;
+	left: 0%;
+	top: 50px;
+}
+
+@media screen and (max-width: 768px) {
+	.hamburger__wrapper{
+		display: block;
+	}
+}
+
+
+
+
+/*-------------------------*/
+/* $mobile_menu 
+---------------------------*/
+#mobile_menu .mobile_menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 20%;
+    box-sizing: border-box;
+
+}
+
+#mobile_menu .mobile_menu a{
+      margin: 15px 0;
+}
+
+#mobile_menu .mobile_menu img{
+  cursor: pointer;
+  position: relative;
+  box-shadow: none;
+    max-width: 75%;
+    height: auto;
+    transition: none;
+}
+
+/*-------------------------*/
+/* $prize_form 
+---------------------------*/
+
+.lightbox-target {
+  position: fixed;
+  top: -200%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.83);
+  opacity: 0;
+  -moz-transition: opacity 0.5s ease-in-out;
+  -o-transition: opacity 0.5s ease-in-out;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
+  overflow: hidden;
+  z-index: 90;
+}
+
+.lightbox-target .content {
+  width: 90%;
+  height: 90%;
+  background: #fff;
+  color: #333;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  max-height: 0%;
+  max-width: 0%;
+  border: 3px solid #fff;
+  -moz-box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+  box-sizing: border-box;
+  -moz-transition: ease-in-out 0.5s;
+  -o-transition: ease-in-out 0.5s;
+  -webkit-transition: ease-in-out 0.5s;
+  transition: ease-in-out 0.5s;
+}
+.lightbox-target img {
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  max-height: 0%;
+  max-width: 0%;
+  -moz-box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+  box-sizing: border-box;
+  -moz-transition: ease-in-out 0.5s;
+  -o-transition: ease-in-out 0.5s;
+  -webkit-transition: ease-in-out 0.5s;
+  transition: ease-in-out 0.5s;
+}
+.lightbox-target:target {
+  opacity: 1;
+  top: 0;
+  bottom: 0;
+}
+.lightbox-target:target .content,
+.lightbox-target:target img {
+  max-height: 100%;
+  max-width: 100%;
+}
+.lightbox-target:target .lightbox-close {
+  top: 5%;
+}
+
+.lightbox-close {
+  display: block;
+  width: 50px;
+  height: 50px;
+  box-sizing: border-box;
+  color: #fff;
+  position: absolute;
+  top: 10%;
+  right: 10%;
+  -moz-transition: ease-in-out 0.5s;
+  -o-transition: ease-in-out 0.5s;
+  -webkit-transition: ease-in-out 0.5s;
+  transition: ease-in-out 0.5s;
+}
+
+
+@media screen and (max-width: 992px) {
+.lightbox-close {
+  right: 5%;
+	}
+}
+
+.lightbox-close:before, .lightbox-close:after {
+  content: " ";
+  display: block;
+  height: 30px;
+  width: 3px;
+  background: #fff;
+  position: absolute;
+  left: 24px;
+  top: 10px;
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.lightbox-close:after {
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+
+
+
+/*-------------------------*/
+/* $gashapon
+---------------------------*/
+#gashapon_buttom{
+  -webkit-transform-origin: 347px 660px;
+          transform-origin: 347px 660px;
+  transform: rotate(0deg);
+  transition: all .3s;
+}
+
+#gashapon_buttom:hover{
+  transform: rotate(15deg);
+}
+
+/*-------------------------*/
+/* $login 
+---------------------------*/
+
+.login_form_wrapper{
+    padding-left: 97px;
+}
+
+#fb_login_btn{
+    position: relative;
+    width: 94%;
+    right: -8px;
+    border-radius: 0px;
+    background-color: #3C5A9A;
+    border-color: #3C5A9A;
+    color: #fff;
+}
+
+#normal_login_btn{
+    position: relative;
+    width: 100%;
+    color: #fff;
+    border-radius: 0px;
+    background-color: #4AA2DB;
+    border-color: #4AA2DB;
+}
+
+.login_image_left, .login_image_right{
+    position: absolute;
+    top: -30px;
+}
+
+.login_image_left{
+    left: -135px;
+}
+
+.login_image_right{
+    right: -146px;
+}
+
+
+
+@media screen and (max-width: 992px) {
+
+    .login_form_wrapper{
+        padding-left: 0px;
+    }
+
+    .login_image_left,.login_image_right{
+        display: none;
+    }
+
+
+  #fb_login_btn{
+      width: 100%;
+      right: 0px;
+  }
+}
+
+
+
+
+
+
+/*-------------------------*/
+/* $illustration 
+---------------------------*/
+#illustration1, #illustration2, #illustration3, #illustration4, #illustration5, #illustration6{
+	display: inline-block;
+	position: absolute;
+	width: 90px;
+	height: 90px;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+#illustration1{
+	left: 1%;
+	top: 10%;
+	background-image: url('/image/illustration1.png');
+}
+
+#illustration2{
+	left: 2%;
+	top: 38%;
+	background-image: url('/image/illustration2.png');
+}
+
+#illustration3{
+ 	right: 3%;
+    top: 12%;
+	background-image: url('/image/illustration3.png');
+}
+
+#illustration4{
+    right: 5%;
+    top: 42%;
+	background-image: url('/image/illustration4.png');
+}
+
+#illustration5{
+    right: 2%;
+    top: 54%;
+	background-image: url('/image/illustration5.png');
+}
+
+#illustration6{
+    right: 4%;
+    top: 78%;
+	background-image: url('/image/illustration6.png');
+}
+
+
+@media screen and (max-width: 1200px) {
+	#illustration1, #illustration2, #illustration3, #illustration4, #illustration5, #illustration6{
+		display: none;
+	}
+}
+
+
+
+
+/*-------------------------*/
+/* $snow 
+---------------------------*/
+.snoe{
+  transition: .5s;
+}

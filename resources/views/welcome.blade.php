@@ -5,7 +5,27 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>萬人扭誕蛋 - TripMatch自遊配</title>
+        <meta name="csrf-token" content="{{ csrf_token() }}">    
+        <meta name="author" content="HO, KAI - SHIH">
+        <meta name="copyright" content="Copyright©2017,Trip Match Co.">
+        <meta name="keywords" content="自遊配,tripmatch,訂房,飯店,酒店,線上訂房,住宿" />
+        <meta name="description" content="TripMatch自遊配提供全台上萬間房間住宿配對，最好玩最有趣的訂房平台，歡慶註冊會員破萬人，天天聖誕慶，連續五天登入會員扭蛋蛋 ！上百樣好禮等著你，立刻註冊會員再享旅遊金100元，找房超Easy，天天超回饋 ！">
+
+        <meta itemprop="name" content="萬人扭誕蛋 - TripMatch自遊配">
+        <meta itemprop="image" content="https://active.tripmatch.net/image/meta_img.png">
+        <meta itemprop="description" content="TripMatch自遊配提供全台上萬間房間住宿配對，最好玩最有趣的訂房平台，歡慶註冊會員破萬人，天天聖誕慶，連續五天登入會員扭蛋蛋 ！上百樣好禮等著你，立刻註冊會員再享旅遊金100元，找房超Easy，天天超回饋 ！">
+
+        <meta property="og:title" content="萬人扭誕蛋 - TripMatch自遊配" >
+        <meta property="og:url" content="https://active.tripmatch.net/2017gashapon">
+        <meta property="og:site_name" content="萬人扭誕蛋 - TripMatch自遊配" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://active.tripmatch.net/image/meta_img.png">
+        <meta property="og:image:width" content="563" /> 
+        <meta property="og:image:height" content="296" /> 
+        <meta property="fb:app_id" content="269081420163880" />
+        <meta property="og:description" content="TripMatch自遊配提供全台上萬間房間住宿配對，最好玩最有趣的訂房平台，歡慶註冊會員破萬人，天天聖誕慶，連續五天登入會員扭蛋蛋 ！上百樣好禮等著你，立刻註冊會員再享旅遊金100元，找房超Easy，天天超回饋 ！" >
+
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
@@ -65,6 +85,10 @@
         </style>
     </head>
     <body>
+        <?php
+            header('Location: https://active.tripmatch.net/2017gashapon');
+    exit;
+    ?>
         <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
                 <div class="top-right links">

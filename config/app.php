@@ -60,12 +60,12 @@ return [
     |--------------------------------------------------------------------------
     |
     | Here you may specify the default timezone for your application, which
-    | will be used by the PHP date and date-time functions. We have gone
+    | will be used by the PHP date and daet-time functions. We have gone
     | ahead and set this to a sensible default for you out of the box.
     |
     */
 
-    'timezone' => 'UTC',
+    'timezone' => 'Asia/Taipei',
 
     /*
     |--------------------------------------------------------------------------
@@ -78,7 +78,7 @@ return [
     |
     */
 
-    'locale' => 'en',
+    'locale' => 'zh-TW',
 
     /*
     |--------------------------------------------------------------------------
@@ -124,6 +124,19 @@ return [
     'log' => env('APP_LOG', 'single'),
 
     'log_level' => env('APP_LOG_LEVEL', 'debug'),
+
+    /*
+    |--------------------------------------------------------------------------
+    | 自定義密碼設定 
+    | php artisan config:cache 之後可以透過  config('app.xxx') 取得
+    | (app.env 代表在 config 資料夾中的 app.php 中的 env)
+    |--------------------------------------------------------------------------
+    */
+    'facebook_app_id' => env('FACEBOOK_APP_ID'),
+    'facebook_app_secret' => env('FACEBOOK_APP_SECRET'),
+    'facebook_app_version' => env('FACEBOOK_APP_VERSION'),
+    'tripmatch_auth_url' => env('TRIPMATCH_AUTH_URL'),
+
 
     /*
     |--------------------------------------------------------------------------

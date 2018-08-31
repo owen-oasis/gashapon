@@ -15,8 +15,27 @@ window.Vue = require('vue');
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-Vue.component('example-component', require('./components/ExampleComponent.vue'));
+import ElementUI from 'element-ui'
+import 'element-ui/lib/theme-chalk/index.css'
+Vue.use(ElementUI)
+
+import axios from 'axios'
+import VueAxios from 'vue-axios'
+Vue.use(VueAxios, axios)
+
+import VeeValidate from 'vee-validate';
+const config = {
+    errorBagName: 'errorBags', // change if property conflicts.
+    fieldsBagName: 'fieldBags',
+};
+Vue.use(VeeValidate, config);
+
+import App from './components/App'
+Vue.component('app',App)
+
+
 
 const app = new Vue({
     el: '#app'
 });
+
